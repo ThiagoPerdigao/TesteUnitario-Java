@@ -1,5 +1,6 @@
 package src;
 
+
 public class Livro {
     private int id;
     private String titulo;
@@ -14,25 +15,24 @@ public class Livro {
     }
 
 
-    
 
 
     public void criarLivro(int novoId, String novoTitulo, String novoAutor) {
         this.id = novoId;
         this.titulo = novoTitulo;
         this.autor = novoAutor;
-        
+        this.emprestado = false; 
     }
-    
 
-    public void emprestarLivro() {
+
+    public void emprestarLivroStatus() {
         if (emprestado) {
             throw new IllegalStateException("O livro já está emprestado.");
         }
         this.emprestado = true;
     }
 
-    public void retornarLivro() {
+    public void retornarLivroStatus() {
         if (!emprestado) {
             throw new IllegalStateException("O livro já foi retornado.");
         }

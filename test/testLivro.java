@@ -22,26 +22,26 @@ public class testLivro {
 
 
     @Test
-    public void testEmprestarLivro() {
+    public void testEmprestarLivroStatus() {
 
         Livro livro = new Livro(1, "Livro do Thiago", "Thiago");
        
-        livro.emprestarLivro();
+        livro.emprestarLivroStatus();
         assertTrue(livro.estaEmprestado());
-
     }
 
      @Test
     public void testRetornarLivro() {
 
         Livro livro = new Livro(1, "Livro do Thiago", "Thiago");
-        livro.emprestarLivro();
-        livro.retornarLivro();
+        livro.emprestarLivroStatus();
+        livro.retornarLivroStatus();
         assertFalse(livro.estaEmprestado());
 
     }
 
     
+
 
 
 
